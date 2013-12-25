@@ -2,3 +2,61 @@
  * @author Alexander Marenin
  * @date December 2013
  */
+
+@import '../bower_components/bootstrap/less/bootstrap';
+@import 'variables';
+@import 'fonts';
+
+body {
+    font-family: 'Open Sans';
+    & > header {
+        padding: 15px 20px;
+        h1 {
+            padding: 0;
+            margin: 25px 0;
+        }
+    }
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'Open Sans';
+}
+
+h1, h2, h3, .h1, .h2, .h3 {
+    font-weight: 100;
+}
+
+section.main {
+    margin: 0;
+
+    & > header {
+        background: @color-bg-header;
+        padding: 4px 20px 0 20px;
+    }
+
+    & > section.tab-content {
+        padding: 0 20px 20px 20px;
+
+        & > div > header {
+            padding: 25px 0;
+            overflow: hidden;
+            h3 {
+                margin: 0;
+                float: left;
+            }
+
+            .statistics-type-container {
+                float: right;
+            }
+
+            .calendar-container {
+                float: right;
+            }
+        }
+    }
+}
+
+
+#simplates {
+
+}

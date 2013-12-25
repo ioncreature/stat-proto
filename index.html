@@ -1,13 +1,65 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Stat Prototype</title>
+    <title>Statistics Prototype</title>
     <link rel="stylesheet/less" type="text/css" href="style/all.less" />
-    <script src="less.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css" />
+    <script src="bower_components/jquery/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="bower_components/less.js/dist/less-1.4.2.min.js"></script>
+    <script src="bower_components/clndr/clndr.min.js"></script>
 </head>
 <body>
 
+<header>
+    <h1>Статистика</h1>
+</header>
 
+<section class="main">
+    <header>
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#simplates" data-toggle="tab">Симплейты</a></li>
+            <li><a href="#printers" data-toggle="tab">Принтеры</a></li>
+            <li><a href="#displays" data-toggle="tab">Экраны</a></li>
+        </ul>
+    </header>
+
+    <!-- Tab panes -->
+    <section class="tab-content">
+        <!-- Simplates -->
+        <div class="tab-pane fade in active" id="simplates">
+            <header>
+                <h3>Статистика по симплейтам</h3>
+                <div class="statistics-type-container btn-group" data-toggle="buttons">
+                    <label class="btn btn-default active">
+                        <input type="radio" name="stat-type" id="common" checked> Общая
+                    </label>
+                    <label class="btn btn-default">
+                        <input type="radio" name="stat-type" id="relative"> Сравнительная
+                    </label>
+                </div>
+                <div class="calendar-container">
+                    <div class="calendar-from"></div>
+                    <div class="calendar-to"></div>
+                </div>
+            </header>
+        </div>
+
+        <!-- Printers -->
+        <div class="tab-pane fade in" id="printers">
+            <header>
+                <h3>Статистика по принтерам</h3>
+            </header>
+        </div>
+
+        <!-- Displays -->
+        <div class="tab-pane fade in" id="displays">
+            <header>
+                <h3>Статистика по экранам</h3>
+            </header>
+        </div>
+    </section>
+</section>
 
 </body>
 </html>

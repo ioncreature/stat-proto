@@ -6,7 +6,8 @@
         "sugar": "1.x.x",
         "requirejs": "2.x.x",
         "font-awesome": "4.x.x",
-        "less.js": "1.4.2"
+        "less.js": "1.4.2",
+        "clndr": "*"
     },
     "devDependencies": {
         "mocha": "*",
