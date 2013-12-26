@@ -7,14 +7,32 @@
 @import 'variables';
 @import 'fonts';
 
+html, body {
+    height: 100%;
+}
+
 body {
     font-family: 'Open Sans';
-    & > header {
-        padding: 15px 20px;
-        h1 {
-            padding: 0;
-            margin: 25px 0;
-        }
+
+    #wrap {
+        min-height: 100%;
+        height: auto;
+        margin: 0 auto -60px;
+        padding: 0 0 60px;
+    }
+    & > footer {
+        margin: 0;
+        padding: 20px;
+        height: 60px;
+        background-color: @color-bg;
+    }
+}
+
+#main-header {
+    padding: 15px 20px;
+    h1 {
+        padding: 0;
+        margin: 25px 0;
     }
 }
 
@@ -30,33 +48,73 @@ section.main {
     margin: 0;
 
     & > header {
-        background: @color-bg-header;
-        padding: 4px 20px 0 20px;
+        background: @color-bg;
+        padding-top: 4px;
+        .main-tabs {
+            padding: 0 20px;
+        }
     }
 
-    & > section.tab-content {
-        padding: 0 20px 20px 20px;
+    #second-line {
+        padding: 20px 0;
+        overflow: hidden;
+        border-bottom: 1px solid @color-border;
+        h3 {
+            line-height: 34px;
+            margin: 0;
+        }
 
-        & > div > header {
-            padding: 25px 0;
-            overflow: hidden;
-            h3 {
-                margin: 0;
-                float: left;
+        .statistics-type-container {
+            text-align: center;
+            .btn {
+                -webkit-box-shadow: none;
+                box-shadow: none;
+                border-radius: 0;
             }
+        }
 
-            .statistics-type-container {
-                float: right;
+        .calendar-container {
+            float: right;
+            .calendar-input {
+                width: 200px;
+                * {
+                    border-radius: 0;
+                }
             }
+        }
+    }
+    
+    .tab-content {
+        overflow: hidden;
+    }
+}
 
-            .calendar-container {
-                float: right;
+
+#simplates {
+    #type-nav {
+        background-color: @color-bg;
+        padding: 20px 0 20px 20px;
+
+        ul > li {
+            margin: 0;
+            a {
+                padding: 12px 20px;
+            }
+            &:hover a {
+                background-color: @color-bg-white;
+            }
+            &.active {
+                background-color: @color-bg-white;
             }
         }
     }
 }
 
 
-#simplates {
+#printers {
+    padding: 10px 20px;
+}
 
+#displays {
+    padding: 10px 20px;
 }

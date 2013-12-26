@@ -3,11 +3,9 @@
     "dependencies": {
         "jquery": "2.x.x",
         "bootstrap": "3.x.x",
-        "sugar": "1.x.x",
-        "requirejs": "2.x.x",
         "font-awesome": "4.x.x",
         "less.js": "1.4.2",
-        "clndr": "*"
+        "pikaday": "*"
     },
     "devDependencies": {
         "mocha": "*",

@@ -2,34 +2,37 @@
 <html>
 <head>
     <title>Statistics Prototype</title>
-    <link rel="stylesheet/less" type="text/css" href="style/all.less" />
-    <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css" />
+    <link rel="stylesheet/less" href="style/all.less" />
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" />
     <script src="bower_components/jquery/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/less.js/dist/less-1.4.2.min.js"></script>
-    <script src="bower_components/clndr/clndr.min.js"></script>
+    <script src="bower_components/pikaday/pikaday.js"></script>
+    <script src="main.js"></script>
 </head>
 <body>
 
-<header>
-    <h1>Статистика</h1>
-</header>
+<div id="wrap">
 
-<section class="main">
-    <header>
-        <ul class="nav nav-tabs">
-            <li class="active"><a href="#simplates" data-toggle="tab">Симплейты</a></li>
-            <li><a href="#printers" data-toggle="tab">Принтеры</a></li>
-            <li><a href="#displays" data-toggle="tab">Экраны</a></li>
-        </ul>
+    <header id="main-header">
+        <h1>Статистика</h1>
     </header>
 
-    <!-- Tab panes -->
-    <section class="tab-content">
-        <!-- Simplates -->
-        <div class="tab-pane fade in active" id="simplates">
-            <header>
-                <h3>Статистика по симплейтам</h3>
+    <section class="main">
+        <header>
+            <ul class="nav nav-tabs main-tabs">
+                <li><a href="#simplates" data-toggle="tab" data-caption="Статистика по симплейтам">Симплейты</a></li>
+                <li><a href="#printers" data-toggle="tab" data-caption="Статистика по принтерам">Принтеры</a></li>
+                <li><a href="#displays" data-toggle="tab" data-caption="Статистика по экранам">Экраны</a></li>
+            </ul>
+        </header>
+
+        <section id="second-line">
+            <div class="col-sm-5">
+                <h3 id="tab-caption"></h3>
+            </div>
+
+            <div class="col-sm-4">
                 <div class="statistics-type-container btn-group" data-toggle="buttons">
                     <label class="btn btn-default active">
                         <input type="radio" name="stat-type" id="common" checked> Общая
@@ -38,28 +41,96 @@
                         <input type="radio" name="stat-type" id="relative"> Сравнительная
                     </label>
                 </div>
+            </div>
+
+            <div class="col-sm-3">
                 <div class="calendar-container">
+                    <div class="calendar-input input-group">
+                        <input type="text" class="form-control" />
+                        <span class="input-group-btn">
+                            <button class="open-calendar btn btn-default" type="button"><i class="fa fa-calendar"></i></button>
+                        </span>
+                    </div>
                     <div class="calendar-from"></div>
                     <div class="calendar-to"></div>
                 </div>
-            </header>
-        </div>
+            </div>
+        </section>
 
-        <!-- Printers -->
-        <div class="tab-pane fade in" id="printers">
-            <header>
-                <h3>Статистика по принтерам</h3>
-            </header>
-        </div>
+        <!-- Tab panes -->
+        <section class="tab-content">
+            <!-- Simplates -->
+            <div class="tab-pane fade in active" id="simplates">
+                <div id="type-nav" class="col-sm-3">
+                    <ul class="nav nav-stacked">
+                        <li class="active"><a href="#coupons" data-toggle="tab">Купоны</a></li>
+                        <li><a href="#polls" data-toggle="tab">Опросы</a></li>
+                        <li><a href="#ads" data-toggle="tab">Реклама</a></li>
+                        <li><a href="#achievements" data-toggle="tab">Достижения</a></li>
+                        <li><a href="#games" data-toggle="tab">Игры</a></li>
+                        <li><a href="#additional-sales" data-toggle="tab">Дополнительные продажи</a></li>
+                    </ul>
+                </div>
 
-        <!-- Displays -->
-        <div class="tab-pane fade in" id="displays">
-            <header>
-                <h3>Статистика по экранам</h3>
-            </header>
-        </div>
+                <div id="type-content" class="col-sm-9">
+                    <section class="tab-content">
+                        <div class="tab-pane fade in active" id="coupons">
+                            <h3>
+                                Ива склонилась и спит,<br />
+                                И кажется мне, соловей на ветке -<br />
+                                Это её душа
+                            </h3>
+                        </div>
+                        <div class="tab-pane fade in" id="polls">
+                            <h3>Хуй!</h3>
+                        </div>
+                        <div class="tab-pane fade in" id="ads">
+                            <h3>
+                                С ветки на ветку<br />
+                                Тихо сбегают капли...<br />
+                                Дождик весенний.
+                            </h3>
+                        </div>
+                        <div class="tab-pane fade in" id="achievements">
+                            <h3>
+                                Зиме вопреки<br />
+                                Вырастают из сердца<br />
+                                Бабочки крылья
+                            </h3>
+                        </div>
+                        <div class="tab-pane fade in" id="games">
+                            <h3>Хуй-Хуй!</h3>
+                        </div>
+                        <div class="tab-pane fade in" id="additional-sales">
+                            <h3>
+                                Старый пруд.<br />
+                                Прыгнула в воду лягушка.<br />
+                                Всплеск в тишине.
+                            </h3>
+                        </div>
+                    </section>
+                </div>
+            </div>
+
+            <!-- Printers -->
+            <div class="tab-pane fade in" id="printers">
+                <h3>Хуй! Хуй-хуй!</h3>
+            </div>
+
+            <!-- Displays -->
+            <div class="tab-pane fade in" id="displays">
+                <h3>Смерть стоит за твоим левым плечом.</h3>
+            </div>
+        </section>
     </section>
-</section>
+
+</div>
+
+<footer>
+    <div class="container">
+        Alexander Marenin, 2013
+    </div>
+</footer>
 
 </body>
 </html>
