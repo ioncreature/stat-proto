@@ -15,11 +15,5 @@ $( function(){
 
 
     // Calendar
-    $( '.open-calendar' ).click( function(){
-        console.log( 'asdasd' );
-        var parent = $( this ).closest( '.calendar-container' );
-
-        parent.find( '.calendar-from' ).clndr();
-        parent.find( '.calendar-to' ).clndr();
-    });
+    new Pikaday( {field: $('#calendar')[0]} );
 });

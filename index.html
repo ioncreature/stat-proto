@@ -7,6 +7,7 @@
     <script src="bower_components/jquery/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="bower_components/less.js/dist/less-1.4.2.min.js"></script>
+    <link rel="stylesheet" href="bower_components/pikaday/css/pikaday.css" />
     <script src="bower_components/pikaday/pikaday.js"></script>
     <script src="main.js"></script>
 </head>
@@ -46,10 +47,8 @@
             <div class="col-sm-3">
                 <div class="calendar-container">
                     <div class="calendar-input input-group">
-                        <input type="text" class="form-control" />
-                        <span class="input-group-btn">
-                            <button class="open-calendar btn btn-default" type="button"><i class="fa fa-calendar"></i></button>
-                        </span>
+                        <input id="calendar" type="text" class="form-control" />
+                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                     </div>
                     <div class="calendar-from"></div>
                     <div class="calendar-to"></div>
@@ -85,11 +84,7 @@
                             <h3>Хуй!</h3>
                         </div>
                         <div class="tab-pane fade in" id="ads">
-                            <h3>
-                                С ветки на ветку<br />
-                                Тихо сбегают капли...<br />
-                                Дождик весенний.
-                            </h3>
+                            <h3>Хуй!</h3>
                         </div>
                         <div class="tab-pane fade in" id="achievements">
                             <h3>
@@ -99,7 +94,11 @@
                             </h3>
                         </div>
                         <div class="tab-pane fade in" id="games">
-                            <h3>Хуй-Хуй!</h3>
+                            <h3>
+                                С ветки на ветку<br />
+                                Тихо сбегают капли...<br />
+                                Дождик весенний.
+                            </h3>
                         </div>
                         <div class="tab-pane fade in" id="additional-sales">
                             <h3>
@@ -114,7 +113,7 @@
 
             <!-- Printers -->
             <div class="tab-pane fade in" id="printers">
-                <h3>Хуй! Хуй-хуй!</h3>
+                <h3>Хуй!</h3>
             </div>
 
             <!-- Displays -->
