@@ -9,6 +9,9 @@
     <script src="bower_components/less.js/dist/less-1.4.2.min.js"></script>
     <link rel="stylesheet" href="bower_components/pikaday/css/pikaday.css" />
     <script src="bower_components/pikaday/pikaday.js"></script>
+    <script src="bower_components/flot/jquery.flot.js"></script>
+    <script src="bower_components/flot/jquery.flot.canvas.js"></script>
+    <script src="bower_components/flot/jquery.flot.resize.js"></script>
     <script src="main.js"></script>
 </head>
 <body>
@@ -72,11 +75,9 @@
                 <div id="type-content" class="col-sm-9">
                     <section class="tab-content">
                         <div class="tab-pane fade in active" id="coupons">
-                            <h3>
-                                Ива склонилась и спит,<br />
-                                И кажется мне, соловей на ветке -<br />
-                                Это её душа
-                            </h3>
+                            <div id="chart1" class="chart"></div>
+                            <div id="chart2" class="chart"></div>
+                            <div id="chart3" class="chart"></div>
                         </div>
 
                         <div class="tab-pane fade in" id="polls">
@@ -88,7 +89,11 @@
                         </div>
 
                         <div class="tab-pane fade in" id="ads">
-                            <h3>Хуй!</h3>
+                            <h3>
+                                Ива склонилась и спит,<br />
+                                И кажется мне, соловей на ветке -<br />
+                                Это её душа
+                            </h3>
                         </div>
 
                         <div class="tab-pane fade in" id="achievements">
