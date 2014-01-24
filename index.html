@@ -2,6 +2,7 @@
 <html>
 <head>
     <title>Statistics Prototype</title>
+    <meta charset="utf-8" />
     <link rel="stylesheet/less" href="style/all.less" />
     <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" />
     <script src="bower_components/jquery/jquery.min.js"></script>
@@ -18,11 +19,45 @@
 
 <div id="wrap">
 
-    <header id="main-header">
-        <h1><i class="fa fa-signal" style="font-size: 0.85em;"></i> Статистика</h1>
+    <header class="main">
+        <div class="container">
+            <div class="col-md-4">
+                <h1>BackOffice</h1>
+            </div>
+
+            <div class="col-md-offset-3 col-md-3">
+                <div class="input-group">
+                    <input type="text" class="form-control" />
+                    <span class="input-group-addon"><i class="fa fa-search"></i></span>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="actions">
+                    <a href="#"><i class="fa fa-user fa-2x"></i></a>
+                    <a href="#"><i class="fa fa-cog fa-2x"></i></a>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <section class="main">
+    <div class="main-menu">
+        <div class="container">
+            <menu>
+                <li><i class="fa fa-briefcase"></i>КЕЙСЫ</li>
+                <li><i class="fa fa-tablet"></i>УСТРОЙСТВА</li>
+                <li class="active"><i class="fa fa-signal"></i>СТАТИСТИКА</li>
+                <li><i class="fa fa-archive"></i>АРХИВ</li>
+            </menu>
+        </div>
+    </div>
+
+    <header class="page-caption">
+        <div class="container">
+            <h1><i class="fa fa-signal" style="font-size: 0.85em;"></i> Статистика</h1>
+        </div>
+    </header>
+
+    <section class="main container">
         <header>
             <ul class="nav nav-tabs main-tabs">
                 <li><a href="#simplates" data-toggle="tab" data-caption="Статистика по симплейтам"><i class="fa fa-tablet"></i> Симплейты</a></li>
@@ -97,7 +132,11 @@
                         </div>
 
                         <div class="tab-pane fade in" id="achievements">
-                            <h3>Хуй!</h3>
+                            <h3>
+                                Старый пруд.<br />
+                                Прыгнула в воду лягушка.<br />
+                                Всплеск в тишине.
+                            </h3>
                         </div>
 
                         <div class="tab-pane fade in" id="games">
@@ -107,13 +146,8 @@
                                 Дождик весенний.
                             </h3>
                         </div>
-
                         <div class="tab-pane fade in" id="additional-sales">
-                            <h3>
-                                Старый пруд.<br />
-                                Прыгнула в воду лягушка.<br />
-                                Всплеск в тишине.
-                            </h3>
+                            <h3>Хуй!</h3>
                         </div>
                     </section>
                 </div>

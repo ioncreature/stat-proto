@@ -47,7 +47,7 @@ $( function(){
 
 function generateData( /*int?*/ count ){
     var r = [],
-        count = count || 30;
+        count = count || 12;
     for ( var i = 0; i < count; i++ )
         r.push( [i, Math.floor(300 * Math.random())] );
     return r;
