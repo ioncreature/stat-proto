@@ -35,14 +35,14 @@ body {
         padding: 10px;
         height: 40px;
         background-color: rgb(35, 31, 32);
-        color: @color-text;
+        color: @color-text-white;
     }
 }
 
 header.main {
     overflow: hidden;
     background-color: @color-bg-black;
-    padding: 15px 0;
+    padding: 25px 0;
     .container > div {
         padding: 10px 0;
     }
@@ -62,7 +62,7 @@ header.main {
                 font-size: 1.6em;
             }
             &:hover {
-                color: @color-text;
+                color: @color-text-white;
                 background-color: @color-blue;
             }
         }
@@ -90,8 +90,8 @@ header.main {
     }
 }
 
-.main-menu {
-    color: @color-text;
+section.main-menu {
+    color: @color-text-white;
     background-color: @color-bg-dark-grey;
     menu {
         margin: 0;
@@ -114,13 +114,43 @@ header.main {
     }
 }
 
-header.page-caption {
-    background-color: #F3F3F3;
-    padding: 15px 20px 0 20px;
-    h1 {
-        margin: 25px 0;
+section.page-caption {
+    background-color: @color-bg;
+    padding: 25px 20px 0 20px;
+
+    .container > div {
+        padding-top: 25px;
+        padding-bottom: 15px;
     }
+
+    h1 {
+        margin: 0;
+    }
+
     .nav, .nav a, .nav a:hover {
         border-width: 0px;
+    }
+
+    #date-button {
+        background-color: @color-red;
+        color: @color-text-white;
+
+        &:focus {
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            outline: none;
+        }
+
+        span {
+            vertical-align: middle;
+            display: inline-block;
+        }
+
+        i {
+            display: inline-block;
+            vertical-align: middle;
+            padding-left: 0.3em;
+            font-size: 1em;
+        }
     }
 }

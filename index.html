@@ -40,7 +40,7 @@
         </div>
     </header>
 
-    <div class="main-menu">
+    <section class="main-menu">
         <div class="container">
             <menu>
                 <li><i class="fa fa-briefcase"></i>КЕЙСЫ</li>
@@ -49,120 +49,108 @@
                 <li><i class="fa fa-archive"></i>АРХИВ</li>
             </menu>
         </div>
-    </div>
+    </section>
 
-    <header class="page-caption">
+    <section class="page-caption">
         <div class="container">
-            <h1><i class="fa fa-bar-chart-o"></i> Статистика</h1>
-            <header>
-                <ul class="nav nav-tabs main-tabs">
-                    <li><a href="#simplates" data-toggle="tab" data-caption="Статистика по симплейтам"><i class="fa fa-tablet"></i> Симплейты</a></li>
-                    <li><a href="#printers" data-toggle="tab" data-caption="Статистика по принтерам"><i class="fa fa-print"></i> Принтеры</a></li>
-                    <li><a href="#displays" data-toggle="tab" data-caption="Статистика по экранам"><i class="fa fa-desktop"></i> Экраны</a></li>
-                </ul>
-            </header>
+            <div class="col-md-6">
+                <h1><i class="fa fa-bar-chart-o"></i> Статистика</h1>
+            </div>
+
+            <div class="col-md-3">
+                <select class="form-control">
+                    <option>Общая статистика</option>
+                    <option>Сравнительная статистика</option>
+                </select>
+            </div>
+
+            <div class="col-md-3" style="text-align: center">
+                <button id="date-button" class="btn">
+                    <span>Последняя неделя</span>
+                    <i class="fa fa-th"></i>
+                </button>
+            </div>
         </div>
-    </header>
 
-    <section class="main container">
+        <div class="container">
+            <menu class="nav nav-tabs main-tabs">
+                <li><a href="#simplates" data-toggle="tab" data-caption="Статистика по симплейтам"><i class="fa fa-tablet"></i> Симплейты</a></li>
+                <li><a href="#printers" data-toggle="tab" data-caption="Статистика по принтерам"><i class="fa fa-print"></i> Принтеры</a></li>
+                <li><a href="#displays" data-toggle="tab" data-caption="Статистика по экранам"><i class="fa fa-desktop"></i> Экраны</a></li>
+            </menu>
+        </div>
+    </section>
 
-        <section id="second-line">
-            <div class="col-sm-5">
-                <h3 id="tab-caption"></h3>
+    <!-- Tab panes -->
+    <section class="page-content container tab-content">
+        <!-- Simplates -->
+        <div class="tab-pane fade in active" id="simplates">
+            <div id="type-nav" class="col-md-3">
+                <menu class="nav nav-stacked">
+                    <li class="active"><a href="#coupons" data-toggle="tab"><i class="fa fa-tags"></i>КУПОНЫ</a></li>
+                    <li><a href="#polls" data-toggle="tab"><i class="fa fa-question-circle"></i>ОПРОСЫ</a></li>
+                    <li><a href="#ads" data-toggle="tab"><i class="fa fa-smile-o"></i>РЕКЛАМА</a></li>
+                    <li><a href="#achievements" data-toggle="tab"><i class="fa fa-level-up"></i>ДОСТИЖЕНИЯ</a></li>
+                    <li><a href="#games" data-toggle="tab"><i class="fa fa-gamepad"></i>ИГРЫ</a></li>
+                    <li><a href="#additional-sales" data-toggle="tab"><i class="fa fa-plus-square-o"></i>ДОПОЛНИТЕЛЬНЫЕ ПРОДАЖИ</a></li>
+                </menu>
             </div>
 
-            <div class="col-sm-4">
-                <div class="statistics-type-container btn-group" data-toggle="buttons">
-                    <label class="btn btn-default active">
-                        <input type="radio" name="stat-type" id="common" checked> Общая
-                    </label>
-                    <label class="btn btn-default">
-                        <input type="radio" name="stat-type" id="relative"> Сравнительная
-                    </label>
-                </div>
-            </div>
-
-            <div class="col-sm-3">
-                <div class="calendar-container">
-                    <div class="calendar-input input-group">
-                        <input id="calendar" type="text" class="form-control" />
-                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+            <div id="type-content" class="col-md-9">
+                <section class="tab-content">
+                    <div class="tab-pane fade in active" id="coupons">
+                        <div id="chart1" class="chart"></div>
+                        <div id="chart2" class="chart"></div>
+                        <div id="chart3" class="chart"></div>
                     </div>
-                </div>
+
+                    <div class="tab-pane fade in" id="polls">
+                        <h3>
+                            Зиме вопреки<br />
+                            Вырастают из сердца<br />
+                            Бабочки крылья
+                        </h3>
+                    </div>
+
+                    <div class="tab-pane fade in" id="ads">
+                        <h3>
+                            Ива склонилась и спит,<br />
+                            И кажется мне, соловей на ветке -<br />
+                            Это её душа
+                        </h3>
+                    </div>
+
+                    <div class="tab-pane fade in" id="achievements">
+                        <h3>
+                            Старый пруд.<br />
+                            Прыгнула в воду лягушка.<br />
+                            Всплеск в тишине.
+                        </h3>
+                    </div>
+
+                    <div class="tab-pane fade in" id="games">
+                        <h3>
+                            С ветки на ветку<br />
+                            Тихо сбегают капли...<br />
+                            Дождик весенний.
+                        </h3>
+                    </div>
+                    <div class="tab-pane fade in" id="additional-sales">
+                        <h3>Хуй!</h3>
+                    </div>
+                </section>
             </div>
-        </section>
+        </div>
 
-        <!-- Tab panes -->
-        <section class="tab-content">
-            <!-- Simplates -->
-            <div class="tab-pane fade in active" id="simplates">
-                <div id="type-nav" class="col-sm-3">
-                    <ul class="nav nav-stacked">
-                        <li class="active"><a href="#coupons" data-toggle="tab">Купоны</a></li>
-                        <li><a href="#polls" data-toggle="tab">Опросы</a></li>
-                        <li><a href="#ads" data-toggle="tab">Реклама</a></li>
-                        <li><a href="#achievements" data-toggle="tab">Достижения</a></li>
-                        <li><a href="#games" data-toggle="tab">Игры</a></li>
-                        <li><a href="#additional-sales" data-toggle="tab">Дополнительные продажи</a></li>
-                    </ul>
-                </div>
+        <!-- Printers -->
+        <div class="tab-pane fade in" id="printers">
+            <h3>Хуй!</h3>
+        </div>
 
-                <div id="type-content" class="col-sm-9">
-                    <section class="tab-content">
-                        <div class="tab-pane fade in active" id="coupons">
-                            <div id="chart1" class="chart"></div>
-                            <div id="chart2" class="chart"></div>
-                            <div id="chart3" class="chart"></div>
-                        </div>
-
-                        <div class="tab-pane fade in" id="polls">
-                            <h3>
-                                Зиме вопреки<br />
-                                Вырастают из сердца<br />
-                                Бабочки крылья
-                            </h3>
-                        </div>
-
-                        <div class="tab-pane fade in" id="ads">
-                            <h3>
-                                Ива склонилась и спит,<br />
-                                И кажется мне, соловей на ветке -<br />
-                                Это её душа
-                            </h3>
-                        </div>
-
-                        <div class="tab-pane fade in" id="achievements">
-                            <h3>
-                                Старый пруд.<br />
-                                Прыгнула в воду лягушка.<br />
-                                Всплеск в тишине.
-                            </h3>
-                        </div>
-
-                        <div class="tab-pane fade in" id="games">
-                            <h3>
-                                С ветки на ветку<br />
-                                Тихо сбегают капли...<br />
-                                Дождик весенний.
-                            </h3>
-                        </div>
-                        <div class="tab-pane fade in" id="additional-sales">
-                            <h3>Хуй!</h3>
-                        </div>
-                    </section>
-                </div>
-            </div>
-
-            <!-- Printers -->
-            <div class="tab-pane fade in" id="printers">
-                <h3>Хуй!</h3>
-            </div>
-
-            <!-- Displays -->
-            <div class="tab-pane fade in" id="displays">
-                <h3>Смерть стоит за твоим левым плечом.</h3>
-            </div>
-        </section>
+        <!-- Displays -->
+        <div class="tab-pane fade in" id="displays">
+            <h3>Смерть стоит за твоим левым плечом.</h3>
+        </div>
     </section>
 
 </div>
