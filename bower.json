@@ -5,8 +5,9 @@
         "bootstrap": "3.x.x",
         "font-awesome": "4.x.x",
         "less.js": "1.4.2",
-        "pikaday": "*",
-        "flot": "*"
+        "flot": "*",
+        "flot.tooltip": "*",
+        "datetimepicker": "*"
     },
     "devDependencies": {
         "mocha": "*",

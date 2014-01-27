@@ -82,8 +82,23 @@ section.page-content {
             }
         }
     }
-}
 
+    #type-content {
+        padding: 0 0 0 15px;
+    }
+
+    #chart-container1 {
+        background-color: @color-blue;
+    }
+
+    #chart-container2 {
+        background-color: @color-salad;
+    }
+
+    #chart-container3    {
+        background-color: @color-blue;
+    }
+}
 
 #printers {
     padding: 10px 20px;
@@ -94,10 +109,29 @@ section.page-content {
 }
 
 #coupons {
-    padding: 20px;
+    padding: 0 0 0 10px;
 }
 
 .chart {
-    min-height: 250px;
-    margin-bottom: 30px;
+    padding: 16px 20px 20px 20px;
+    margin-bottom: 27px;
+
+    header {
+        margin: 0 0 23px 0;
+        color: white;
+
+        span {
+
+        }
+        a {
+            color: inherit;
+            float: right;
+            font-size: 0.9em;
+        }
+    }
+
+    & > div {
+        height: 100%;
+        min-height: 215px;
+    }
 }

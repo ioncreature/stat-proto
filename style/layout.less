@@ -108,7 +108,7 @@ section.main-menu {
             }
             i {
                 font-size: 1.5em;
-                padding-right: 0.5em;
+                padding-right: 0.4em;
             }
         }
     }
@@ -134,6 +134,7 @@ section.page-caption {
     #date-button {
         background-color: @color-red;
         color: @color-text-white;
+        width: 200px;
 
         &:focus {
             -webkit-box-shadow: none;
@@ -152,5 +153,24 @@ section.page-caption {
             padding-left: 0.3em;
             font-size: 1em;
         }
+    }
+
+    .calendar-container {
+        overflow: hidden;
+        width: 550px;
+    }
+
+    .popover {
+        max-width: 550px;
+    }
+    .popover-content {
+    }
+
+    .xdsoft_datepicker {
+        float: left;
+    }
+
+    .xdsoft_timepicker {
+        float: left;
     }
 }
